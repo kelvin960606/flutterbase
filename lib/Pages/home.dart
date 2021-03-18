@@ -44,52 +44,36 @@ class Home extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Pulse(
-                  delay: Duration(seconds: 1),
-                  infinite: true,
-                  child: ClayContainer(
-                    emboss: true,
-                    color: Color(0xFFF2F2F2),
-                    height: 50,
-                    width: 50,
-                    borderRadius: 50,
-                  ),
+                ClayContainer(
+                  emboss: true,
+                  color: Color(0xFFF2F2F2),
+                  height: 50,
+                  width: 50,
+                  borderRadius: 50,
                 ),
                 SizedBox(width: 50),
-                Pulse(
-                  delay: Duration(seconds: 2),
-                  infinite: true,
-                  child: ClayContainer(
-                    color: Color(0xFFF2F2F2),
-                    height: 50,
-                    width: 50,
-                    borderRadius: 75,
-                    curveType: CurveType.concave,
-                  ),
+                ClayContainer(
+                  color: Color(0xFFF2F2F2),
+                  height: 50,
+                  width: 50,
+                  borderRadius: 75,
+                  curveType: CurveType.concave,
                 ),
                 SizedBox(width: 50),
-                Pulse(
-                  delay: Duration(seconds: 3),
-                  infinite: true,
-                  child: ClayContainer(
-                    color: Color(0xFFF2F2F2),
-                    height: 50,
-                    width: 50,
-                    borderRadius: 75,
-                    curveType: CurveType.none,
-                  ),
+                ClayContainer(
+                  color: Color(0xFFF2F2F2),
+                  height: 50,
+                  width: 50,
+                  borderRadius: 75,
+                  curveType: CurveType.none,
                 ),
                 SizedBox(width: 50),
-                Pulse(
-                  delay: Duration(seconds: 4),
-                  infinite: true,
-                  child: ClayContainer(
-                    color: Color(0xFFF2F2F2),
-                    height: 50,
-                    width: 50,
-                    borderRadius: 75,
-                    curveType: CurveType.convex,
-                  ),
+                ClayContainer(
+                  color: Color(0xFFF2F2F2),
+                  height: 50,
+                  width: 50,
+                  borderRadius: 75,
+                  curveType: CurveType.convex,
                 ),
               ],
             ),

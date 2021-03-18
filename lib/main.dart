@@ -4,8 +4,8 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'Core/router.dart';
 import 'Services/initialService.dart';
 
-void main() {
-  initServices();
+void main() async {
+  await initServices();
   runApp(GetMaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/',

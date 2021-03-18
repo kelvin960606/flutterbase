@@ -1,5 +1,4 @@
 import 'package:flutterbase/Constant/styles.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
@@ -8,10 +7,12 @@ class LoginController extends GetxController {
   RxString error = ''.obs;
 
   void setUsername(value) {
+    setError('');
     username.value = value;
   }
 
   void setPassword(value) {
+    setError('');
     password.value = value;
   }
 
@@ -22,15 +23,15 @@ class LoginController extends GetxController {
   void submit() {
     error.value = '';
     if (username.value.isEmpty) {
-      error.value = 'Username cannot empty';
+      setError('Username cannot empty');
       return;
     }
     if (password.value.isEmpty) {
-      error.value = 'Password cannot empty';
+      setError('Password cannot empty');
       return;
     }
     if (username.value != 'admin' || password.value != 'admin') {
-      error.value = 'Incorrect username or password.';
+      setError('Incorrect username or password.');
       return;
     } else {
       Get.snackbar(
@@ -38,7 +39,7 @@ class LoginController extends GetxController {
         'Welcome to Our App',
         backgroundColor: secondary,
       );
-      Get.toNamed('/home');
+      Get.offAndToNamed('/home');
     }
   }
 }

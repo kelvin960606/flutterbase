@@ -4,7 +4,7 @@ import 'package:get_storage/get_storage.dart';
 
 import 'apiService.dart';
 
-void initServices() async {
+Future initServices() async {
   await Get.putAsync(() => GetStorage.init());
   final AuthController auth = Get.put(AuthController());
   auth.init();
