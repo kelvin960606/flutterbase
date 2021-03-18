@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:clay_containers/clay_containers.dart';
-import 'package:flstart/Controllers/authController.dart';
-import 'package:flstart/Utils/common.dart';
-import 'package:flstart/Widgets/button.dart';
+import 'package:flutterbase/Controllers/authController.dart';
+import 'package:flutterbase/Utils/common.dart';
+import 'package:flutterbase/Widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

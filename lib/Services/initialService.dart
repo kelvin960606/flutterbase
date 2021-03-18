@@ -1,4 +1,4 @@
-import 'package:flstart/Controllers/authController.dart';
+import 'package:flutterbase/Controllers/authController.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
