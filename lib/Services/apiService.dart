@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 class ApiService extends GetxService {
-  static const String apiEndpoint = '';
+  static const String apiEndpoint = 'https://pokeapi.co/api/v2';
   static const bool debug = false;
 
   Dio dio = new Dio(new BaseOptions(
@@ -66,5 +66,22 @@ class ApiService extends GetxService {
       response = await dio.delete(path, data: data);
     }
     return response;
+  }
+
+  Future getGenData(id) async {
+    return await apiRequest('/generation/$id', 'get', null, null);
+  }
+
+  Future getPokemon(limit, offset) async {
+    return await apiRequest(
+        '/pokemon?limit=$limit&offset=$offset', 'get', null, null);
+  }
+
+  Future getMorePokemon(url) async {
+    return await apiRequest(url, 'get', null, null);
+  }
+
+  Future getPokemonDetail(id) async {
+    return await apiRequest('/pokemon/$id', 'get', null, null);
   }
 }

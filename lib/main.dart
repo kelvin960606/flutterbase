@@ -8,7 +8,7 @@ void main() async {
   await initServices();
   runApp(GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/pokedex',
       getPages: pages,
       routingCallback: (routing) {
         if (routing.current == '/home') {

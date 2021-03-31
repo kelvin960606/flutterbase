@@ -8,5 +8,6 @@ Future initServices() async {
   await Get.putAsync(() => GetStorage.init());
   final AuthController auth = Get.put(AuthController());
   auth.init();
-  Get.put(() => ApiService().init());
+  final ApiService api = Get.put(ApiService());
+  api.init();
 }

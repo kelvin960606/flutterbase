@@ -39,7 +39,7 @@ class LoginController extends GetxController {
         'Welcome to Our App',
         backgroundColor: secondary,
       );
-      Get.offAndToNamed('/home');
+      Get.offAllNamed('/home');
     }
   }
 }
