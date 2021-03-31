@@ -33,50 +33,6 @@ class Home extends StatelessWidget {
                   var num = random(1, 100);
                   controller.updateToken(num.toString());
                 }),
-            ClayContainer(
-              color: Color(0xFFF2F2F2),
-              child: Padding(
-                padding: EdgeInsets.all(20),
-                child: ClayText("Seize the Clay!", emboss: true, size: 40),
-              ),
-            ),
-            SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ClayContainer(
-                  emboss: true,
-                  color: Color(0xFFF2F2F2),
-                  height: 50,
-                  width: 50,
-                  borderRadius: 50,
-                ),
-                SizedBox(width: 50),
-                ClayContainer(
-                  color: Color(0xFFF2F2F2),
-                  height: 50,
-                  width: 50,
-                  borderRadius: 75,
-                  curveType: CurveType.concave,
-                ),
-                SizedBox(width: 50),
-                ClayContainer(
-                  color: Color(0xFFF2F2F2),
-                  height: 50,
-                  width: 50,
-                  borderRadius: 75,
-                  curveType: CurveType.none,
-                ),
-                SizedBox(width: 50),
-                ClayContainer(
-                  color: Color(0xFFF2F2F2),
-                  height: 50,
-                  width: 50,
-                  borderRadius: 75,
-                  curveType: CurveType.convex,
-                ),
-              ],
-            ),
           ],
         ),
       ),
