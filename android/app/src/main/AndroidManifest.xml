@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutterbase">
    <application
-        android:label="flutterbase"
+        android:label="RUN"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

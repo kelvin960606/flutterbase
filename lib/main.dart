@@ -8,6 +8,7 @@ import 'Services/initialService.dart';
 void main() async {
   await initServices();
   runApp(GetMaterialApp(
+      title: 'RUN',
       translations: Messages(), // your translations
       locale: Locale('en', 'US'),
       debugShowCheckedModeBanner: false,
