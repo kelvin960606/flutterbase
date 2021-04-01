@@ -73,7 +73,7 @@ class LoginController extends GetxController {
         });
       }
     } else {
-      showSuccess(
+      showError(
         'Error',
         'Please try after ${countDown.value}s.',
       );
