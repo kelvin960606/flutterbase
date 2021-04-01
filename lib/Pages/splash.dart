@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbase/Constant/image.dart';
+import 'package:flutterbase/Constant/styles.dart';
+import 'package:flutterbase/Utils/common.dart';
 import 'package:get/get.dart';
 
 class Splash extends StatelessWidget {
@@ -11,11 +14,23 @@ class Splash extends StatelessWidget {
     });
 
     return Scaffold(
-      body: Center(
+      body: Container(
+        alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('Splash Screen'),
+            Hero(
+              tag: 'logo',
+              child: Image.asset(
+                logo,
+                scale: 1.5,
+              ),
+            ),
+            SizedBox(
+              height: h(context, 0.01),
+            ),
+            Text('A simpler way to deliver', style: loginTagLine),
           ],
         ),
       ),
