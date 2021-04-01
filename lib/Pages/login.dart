@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     LoginController loginController = Get.put(LoginController());
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(
         children: [

@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutterbase/Constant/styles.dart';
 import 'package:get/get.dart';
+
+import '../Utils/common.dart';
 
 class LoginController extends GetxController {
   RxString phone = ''.obs;
@@ -48,10 +49,9 @@ class LoginController extends GetxController {
   }
 
   void sendCode() {
-    Get.snackbar(
+    showSuccess(
       'Verify Code Sent',
       'Please check your SMS.',
-      backgroundColor: primary,
     );
     startTimer();
   }
@@ -73,35 +73,31 @@ class LoginController extends GetxController {
         });
       }
     } else {
-      Get.snackbar(
+      showSuccess(
         'Error',
         'Please try after ${countDown.value}s.',
-        backgroundColor: error,
       );
     }
   }
 
   void login() {
     if (phone.value.isEmpty) {
-      Get.snackbar(
+      showError(
         'Error',
         'Phone number cannot empty',
-        backgroundColor: error,
       );
       return;
     }
     if (code.value.isEmpty) {
-      Get.snackbar(
+      showError(
         'Error',
         'Verify code cannot empty',
-        backgroundColor: error,
       );
       return;
     }
-    Get.snackbar(
+    showSuccess(
       'Login Successfully',
       'Welcome to Our App',
-      backgroundColor: secondary,
     );
     Get.offAndToNamed('/home');
   }
