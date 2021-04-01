@@ -31,7 +31,7 @@ void showError(title, desc) {
   Get.snackbar(
     title,
     desc,
-    backgroundColor: primary,
+    backgroundColor: error,
     colorText: Colors.white,
   );
 }
